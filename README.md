@@ -87,7 +87,7 @@ public/
 
 ## Live Demo
 
-🚀 **[View Live Demo on Vercel](https://currency-converter-demo.vercel.app)**
+🚀 **[View Live Demo on Vercel](https://currency-converter-wheat-nine.vercel.app/)**
 
 ## Contributing
 
