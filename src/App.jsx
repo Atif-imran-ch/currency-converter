@@ -54,7 +54,7 @@ function App() {
 
   return (
     <div
-      className="w-full min-h-screen flex items-center justify-center p-4 bg-cover  bg-no-repeat bg-fixed"
+      className="w-full min-h-screen flex items-center justify-center p-3 sm:p-4 bg-cover bg-no-repeat bg-fixed"
       style={{
         backgroundImage: `url('/currency-converter-bg-image.jpg')`,
       }}
@@ -62,8 +62,8 @@ function App() {
       <div className="w-full max-w-md">
         {/* Transparent main card with glass morphism effect */}
         <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-lg border border-white/20">
-          <div className="p-6">
-            <h1 className="text-2xl font-bold text-center text-white mb-6 drop-shadow-md">
+          <div className="p-4 sm:p-6">
+            <h1 className="text-xl sm:text-2xl font-bold text-center text-white mb-4 sm:mb-6 drop-shadow-md">
               Currency Converter
             </h1>
 
@@ -83,10 +83,10 @@ function App() {
                   <button
                     type="button"
                     onClick={swap}
-                    className="p-3 bg-white/20 hover:bg-white/30 text-white rounded-full cursor-pointer rotate-90 shadow-md transition-all duration-300 -my-3 z-10 relative border border-white/30 hover:rotate-270"
+                    className="p-2 sm:p-3 bg-white/20 hover:bg-white/30 text-white rounded-full cursor-pointer rotate-90 shadow-md transition-all duration-300 -my-2 sm:-my-3 z-10 relative border border-white/30 hover:rotate-270"
                     aria-label="Swap currencies"
                   >
-                    <FaExchangeAlt className="h-5 w-5 transition-transform duration-500" />
+                    <FaExchangeAlt className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-500" />
                   </button>
                 </div>
 
@@ -103,7 +103,7 @@ function App() {
               <button
                 type="submit"
                 disabled={!amount}
-                className={`w-full mt-6 py-3 px-4 rounded-lg font-medium transition-colors cursor-pointer ${amount
+                className={`w-full mt-4 sm:mt-6 py-2 sm:py-3 px-4 rounded-lg font-medium text-sm sm:text-base transition-colors cursor-pointer ${amount
                   ? "bg-white/20 hover:bg-white/30 text-white shadow-md border border-white/30"
                   : "bg-white/10 text-white/50 cursor-not-allowed"
                   }`}
@@ -113,9 +113,9 @@ function App() {
             </form>
 
             {convertedAmount && (
-              <div className="mt-4 p-3 bg-white/10 rounded-lg text-center border border-white/20">
-                <p className="text-sm text-white/80">Current Rate</p>
-                <p className="font-semibold text-white">
+              <div className="mt-3 sm:mt-4 p-2 sm:p-3 bg-white/10 rounded-lg text-center border border-white/20">
+                <p className="text-xs sm:text-sm text-white/80">Current Rate</p>
+                <p className="font-semibold text-white text-sm sm:text-base">
                   1 {from.toUpperCase()} = {CurrencyInfo[to]?.toFixed(6)} {to.toUpperCase()}
                 </p>
               </div>

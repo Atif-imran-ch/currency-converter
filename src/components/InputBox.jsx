@@ -17,7 +17,7 @@ function InputBox({
             <label htmlFor={amountInputId} className="block text-sm font-medium text-white/80 mb-1">
                 {label}
             </label>
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
                 <input
                     id={amountInputId}
                     className="flex-1 p-2 text-right text-lg bg-transparent border-none outline-none text-white placeholder-white/50"
@@ -30,7 +30,7 @@ function InputBox({
                     step="0.01"
                 />
                 <select
-                    className="ml-2 p-2 bg-white/20 rounded-md border border-white/20 outline-none cursor-pointer text-white"
+                    className="w-full sm:w-24 md:w-auto sm:ml-2 p-2 bg-white/20 rounded-md border border-white/20 outline-none cursor-pointer text-white text-sm sm:text-base"
                     value={selectCurrency}
                     onChange={(e) => onCurrencyChange(e.target.value)}
                     disabled={currencyDisable}
